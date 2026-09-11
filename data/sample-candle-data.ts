@@ -1,8 +1,11 @@
 import type { Candle, PriceLine } from "vortex-charts";
 
-// SPY 60 bougies ralistes
+// SPY 60 bougies quotidiennes réalistes
+const START_TIME_DAILY = new Date("2026-06-01T09:30:00Z").getTime();
+const ONE_DAY_MS = 86400 * 1000;
+
 export const SPY_CANDLES: Candle[] = Array.from({ length: 60 }, (_, i) => {
-  const baseTime = 1718000000 + i * 3600;
+  const baseTime = START_TIME_DAILY + i * ONE_DAY_MS;
   const basePrice = 575 + Math.sin(i / 6) * 6 + (i * 0.15);
   const open = Math.round((basePrice + (Math.sin(i) * 0.8)) * 100) / 100;
   const close = Math.round((basePrice + (Math.cos(i) * 0.9)) * 100) / 100;
@@ -26,14 +29,14 @@ export const SPY_ATR_BOUNDS = {
   lower: 568.90,
 };
 
-// QQQ 60 bougies
+// QQQ 60 bougies quotidiennes
 export const QQQ_CANDLES: Candle[] = Array.from({ length: 60 }, (_, i) => {
-  const baseTime = 1718000000 + i * 3600;
+  const baseTime = START_TIME_DAILY + i * ONE_DAY_MS;
   const basePrice = 485 + Math.cos(i / 5) * 8 + (i * 0.2);
   const open = Math.round((basePrice + (Math.sin(i * 1.5) * 1.1)) * 100) / 100;
   const close = Math.round((basePrice + (Math.cos(i * 1.5) * 1.2)) * 100) / 100;
   const high = Math.round((Math.max(open, close) + Math.random() * 1.2 + 0.3) * 100) / 100;
-  const low = Math.round((Math.min(open, close) - Math.random() * 1.2 - 0.3) * 100) / 100;
+  const low = Math.round((Math.min(open, close) - Math.random() * 0.8 - 0.2) * 100) / 100;
   const volume = Math.floor(600000 + Math.random() * 1200000);
   return { t: baseTime, open, high, low, close, volume };
 });
@@ -46,9 +49,9 @@ export const QQQ_ATR_BOUNDS = {
   lower: 476.00,
 };
 
-// NVDA 60 bougies
+// NVDA 60 bougies quotidiennes
 export const NVDA_CANDLES: Candle[] = Array.from({ length: 60 }, (_, i) => {
-  const baseTime = 1718000000 + i * 3600;
+  const baseTime = START_TIME_DAILY + i * ONE_DAY_MS;
   const basePrice = 125 + Math.sin(i / 4) * 4 + (i * 0.12);
   const open = Math.round((basePrice + (Math.sin(i) * 0.6)) * 100) / 100;
   const close = Math.round((basePrice + (Math.cos(i) * 0.7)) * 100) / 100;

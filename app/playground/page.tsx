@@ -39,7 +39,6 @@ import {
 import { CodeBlock } from "../../components/CodeBlock";
 import {
   Gamepad2,
-  Sliders,
   Sparkles,
   CandlestickChart,
   Layers,

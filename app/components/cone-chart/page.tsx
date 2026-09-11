@@ -14,7 +14,7 @@ import { InteractiveDemo } from "../../../components/InteractiveDemo";
 import { ImageGallery, type GalleryItem } from "../../../components/ImageGallery";
 import { PropsTable } from "../../../components/PropsTable";
 import { CodeBlock } from "../../../components/CodeBlock";
-import { TrendingUp, HelpCircle } from "lucide-react";
+import { TrendingUp } from "lucide-react";
 
 const GALLERY_ITEMS: GalleryItem[] = [
   {

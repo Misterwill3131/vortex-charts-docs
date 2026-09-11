@@ -35,6 +35,11 @@ export const CodeBlock: React.FC<CodeBlockProps> = ({
           {filename && (
             <span className="text-xs font-mono text-[#9fb0c4] ml-2">{filename}</span>
           )}
+          {language && (
+            <span className="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-[rgba(56,189,248,0.1)] text-[#38bdf8] border border-[rgba(56,189,248,0.2)] ml-2">
+              {language}
+            </span>
+          )}
         </div>
         <button
           onClick={handleCopy}

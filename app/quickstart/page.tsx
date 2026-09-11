@@ -1,6 +1,6 @@
 import React from "react";
 import { CodeBlock } from "../../components/CodeBlock";
-import { Sparkles, Terminal, CheckCircle2 } from "lucide-react";
+import { Sparkles, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
 export default function QuickstartPage() {

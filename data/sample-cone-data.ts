@@ -1,8 +1,12 @@
 import type { Candle, ExpectedMoveSpec, TargetRange } from "vortex-charts";
 
-// Historical candles for cone reference (past 20 days)
+// Historical candles for cone reference (past 20 days leading to 5 DTE)
+const CONE_EXPIRATION_MS = new Date("2026-09-18T20:00:00Z").getTime();
+const ONE_DAY_MS = 86400 * 1000;
+const CONE_START_MS = CONE_EXPIRATION_MS - 25 * ONE_DAY_MS;
+
 export const CONE_HISTORICAL_CANDLES: Candle[] = Array.from({ length: 20 }, (_, i) => {
-  const baseTime = 1717000000 + i * 86400;
+  const baseTime = CONE_START_MS + i * ONE_DAY_MS;
   const basePrice = 120 + i * 0.45 + Math.sin(i / 3) * 2;
   const open = Math.round((basePrice + (Math.sin(i) * 0.5)) * 100) / 100;
   const close = Math.round((basePrice + (Math.cos(i) * 0.55)) * 100) / 100;

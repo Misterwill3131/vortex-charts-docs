@@ -12,8 +12,6 @@ import {
   Move,
   Ruler,
   RotateCcw,
-  MousePointer,
-  Check,
 } from "lucide-react";
 
 const GALLERY_ITEMS: GalleryItem[] = [

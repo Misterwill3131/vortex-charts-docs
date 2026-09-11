@@ -15,7 +15,7 @@ import { InteractiveDemo } from "../../../components/InteractiveDemo";
 import { ImageGallery, type GalleryItem } from "../../../components/ImageGallery";
 import { PropsTable } from "../../../components/PropsTable";
 import { CodeBlock } from "../../../components/CodeBlock";
-import { CandlestickChart, Info } from "lucide-react";
+import { CandlestickChart } from "lucide-react";
 
 const GALLERY_ITEMS: GalleryItem[] = [
   {
