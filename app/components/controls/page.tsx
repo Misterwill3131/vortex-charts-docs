@@ -19,7 +19,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     title: "Barre d'Outils Flottante Glassmorphique",
     description: "Boutons Zoom+, Zoom-, Règle, Fit/Reset et badge de niveau de zoom 1.0x à 5.0x.",
     src: "/images/controls-toolbar.png",
-    tag: "Toolbar v0.3.0",
+    tag: "Toolbar v0.8.0",
   },
   {
     title: "Mesure Vectorielle avec la Règle",
@@ -53,15 +53,15 @@ export default function ControlsDocPage() {
             <Sliders className="w-4 h-4" />
           </div>
           <span className="text-xs font-mono text-[#38bdf8] uppercase tracking-wider font-semibold">
-            Moteur Interactif v0.3.0
+            Moteur Interactif v0.8.0
           </span>
         </div>
         <h1 className="text-3xl font-extrabold text-white">
           Contrôles & Gestes Utilisateur
         </h1>
         <p className="text-sm text-[#9fb0c4]">
-          Découvrez les interactions avancées introduites dans VortexLIB v0.3.0 : 
-          zoom continu, panoramique dynamique, règle vectorielle de mesure et réinitialisation instantanée.
+          Découvrez les interactions avancées de VortexLIB v0.8.0 : 
+          échelle des prix Y et temporelle X indépendantes (style TradingView), zoom continu, panoramique dynamique, règle vectorielle de mesure et réinitialisation instantanée.
         </p>
       </div>
 

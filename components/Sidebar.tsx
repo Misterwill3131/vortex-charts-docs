@@ -35,7 +35,7 @@ const NAV_ITEMS: { title: string; items: NavItem[] }[] = [
       { label: "VortexCandleChart", href: "/components/candle-chart", icon: CandlestickChart },
       { label: "VortexRangeChart", href: "/components/range-chart", icon: Layers },
       { label: "VortexConeChart", href: "/components/cone-chart", icon: TrendingUp },
-      { label: "Contrôles & Gestes", href: "/components/controls", icon: Sliders, badge: "v0.3.0" },
+      { label: "Contrôles & Gestes", href: "/components/controls", icon: Sliders, badge: "v0.8.0" },
     ],
   },
   {

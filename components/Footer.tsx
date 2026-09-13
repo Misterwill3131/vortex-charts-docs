@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
         <div className="flex items-center gap-2 font-mono">
           <span className="font-bold text-white">VorteX<span className="text-[#38bdf8]">bot.app</span></span>
           <span>•</span>
-          <span>VortexLIB v0.3.0</span>
+          <span>VortexLIB v0.8.0</span>
         </div>
         <div className="flex items-center gap-6">
           <a

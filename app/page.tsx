@@ -20,7 +20,7 @@ export default function HomePage() {
       <section className="relative pt-4 pb-8 space-y-6">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[rgba(56,189,248,0.1)] border border-[rgba(56,189,248,0.25)] text-xs font-mono text-[#38bdf8]">
           <span className="w-2 h-2 rounded-full bg-[#38bdf8] animate-pulse" />
-          <span>VortexLIB v0.3.0 disponible</span>
+          <span>VortexLIB v0.8.0 disponible</span>
           <span className="text-[#8290a5]">•</span>
           <span className="text-white font-semibold">100% Canvas 2D Propriétaire</span>
         </div>

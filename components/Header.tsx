@@ -45,7 +45,7 @@ export const Header: React.FC = () => {
             <span className="font-bold tracking-wider text-base text-white flex items-center gap-1.5">
               Vortex<span className="text-[#38bdf8]">LIB</span>
               <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-[rgba(56,189,248,0.15)] text-[#38bdf8] border border-[rgba(56,189,248,0.3)]">
-                v0.3.0
+                v0.8.0
               </span>
             </span>
             <span className="text-[11px] text-[#8290a5] font-mono">

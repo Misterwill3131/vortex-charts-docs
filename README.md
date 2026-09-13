@@ -16,7 +16,7 @@ Site web officiel de documentation technique et de vitrine interactive pour la b
 - [React 19](https://react.dev/)
 - [Tailwind CSS v4](https://tailwindcss.com/)
 - [Lucide React](https://lucide.dev/)
-- [vortex-charts v0.3.0](https://github.com/Misterwill3131/vortex-charts)
+- [vortex-charts v0.8.0](https://github.com/Misterwill3131/vortex-charts)
 
 ## 📦 Installation & Lancement Local
 
