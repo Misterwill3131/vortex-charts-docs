@@ -232,6 +232,29 @@ export default function HomePage() {
             </div>
           </Link>
         </div>
+
+        {/* 19 Models Suite Banner */}
+        <div className="mt-8 rounded-2xl border border-cyan-500/30 bg-gradient-to-r from-cyan-950/40 via-blue-950/20 to-purple-950/40 p-6 backdrop-blur-md flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-2xl">
+          <div className="space-y-2">
+            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-[11px] font-mono text-cyan-300">
+              <Sparkles className="w-3.5 h-3.5" />
+              Nouveauté v0.9.0 — 19 Modèles Natifs
+            </div>
+            <h3 className="text-lg font-bold text-white">
+              Explorez les 19 graphiques interactifs en direct
+            </h3>
+            <p className="text-xs text-zinc-400 max-w-2xl leading-relaxed">
+              Heikin-Ashi, Renko, Point & Figure, Footprint (Order Flow), Volume Profile, Range Bars, Scatter Plot, Heatmap de corrélation, Waterfall, Radar multi-facteurs, Donut d'allocation et Choroplèthe.
+            </p>
+          </div>
+          <Link
+            href="/playground"
+            className="flex-shrink-0 px-5 py-2.5 rounded-lg bg-cyan-500 text-black font-semibold text-xs hover:bg-cyan-400 transition-all flex items-center gap-2 shadow-lg shadow-cyan-500/25"
+          >
+            <span>Ouvrir le Playground (19 Modèles)</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </section>
 
       {/* Quick Install Section */}

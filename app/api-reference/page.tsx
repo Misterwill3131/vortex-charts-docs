@@ -252,6 +252,56 @@ export interface RulerPoint {
           filename="vortex-charts/src/theme/tokens.ts"
         />
       </section>
+
+      {/* 4. Suite des 19 Composants Graphiques */}
+      <section className="space-y-4">
+        <div className="flex items-center gap-2 border-b border-[rgba(160,200,230,0.1)] pb-2">
+          <Cpu className="w-4 h-4 text-emerald-400" />
+          <h2 className="text-lg font-bold text-white">4. Suite des 19 Composants Graphiques (v0.9.0)</h2>
+        </div>
+        <p className="text-xs text-[#9fb0c4]">
+          Tous les composants sont disponibles et exportés directement depuis <code className="text-[#38bdf8] font-mono">vortex-charts</code> :
+        </p>
+
+        <CodeBlock
+          code={`import {
+  // Trading & Price Action
+  VortexCandleChart,
+  VortexLineChart,
+  VortexOhlcChart,
+  VortexHeikinAshiChart,
+  VortexRenkoChart,
+  VortexPointFigureChart,
+  VortexRangeBarChart,
+
+  // Order Flow & Volume
+  VortexFootprintChart,
+  VortexVolumeProfileChart,
+  VortexBarChart,
+
+  // Quantitative & Derivatives
+  VortexConeChart,
+  VortexRangeChart,
+  VortexMultiLineChart,
+  VortexScatterPlot,
+  VortexHeatmap,
+  VortexBoxPlot,
+
+  // Portfolio & Performance
+  VortexAreaChart,
+  VortexWaterfallChart,
+  VortexRadarChart,
+  VortexPieChart,
+  VortexChoroplethMap,
+
+  // Utilities
+  colorWithAlpha,
+  formatPrice,
+  formatCandleTime,
+} from "vortex-charts";`}
+          language="typescript"
+        />
+      </section>
     </div>
   );
 }
