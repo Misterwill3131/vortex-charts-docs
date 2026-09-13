@@ -147,18 +147,52 @@ export default function ControlsDocPage() {
           </div>
 
           <div className="p-4 rounded-xl border border-[rgba(160,200,230,0.1)] bg-[#04091e] flex gap-3.5 items-start">
+            <div className="w-8 h-8 rounded-lg bg-[#38bdf8]/10 border border-[#38bdf8]/30 flex items-center justify-center text-[#38bdf8] shrink-0 mt-0.5 font-bold font-mono text-sm">
+              ↕
+            </div>
+            <div className="space-y-1">
+              <h4 className="text-xs font-bold text-white flex items-center gap-2">
+                Échelle des Prix Y (Style TradingView)
+                <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-[rgba(56,189,248,0.1)] text-[#38bdf8]">
+                  Glisser / Molette sur l'axe Y
+                </span>
+              </h4>
+              <p className="text-xs text-[#9fb0c4] leading-relaxed">
+                Survolez l'axe des prix à droite pour activer le curseur vertical. Cliquez et glissez vers le haut/bas pour étirer ou compresser l'échelle des prix. La molette sur l'axe zoome le prix, et un double-clic sur l'axe réinitialise l'Auto-Fit.
+              </p>
+            </div>
+          </div>
+
+          <div className="p-4 rounded-xl border border-[rgba(160,200,230,0.1)] bg-[#04091e] flex gap-3.5 items-start">
+            <div className="w-8 h-8 rounded-lg bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 shrink-0 mt-0.5 font-bold font-mono text-sm">
+              ↔
+            </div>
+            <div className="space-y-1">
+              <h4 className="text-xs font-bold text-white flex items-center gap-2">
+                Échelle Temporelle X (Style TradingView)
+                <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-teal-500/10 text-teal-400">
+                  Glisser / Molette sur l'axe X
+                </span>
+              </h4>
+              <p className="text-xs text-[#9fb0c4] leading-relaxed">
+                Survolez l'axe du temps en bas pour activer le curseur horizontal. Cliquez et glissez latéralement pour étirer ou compresser la chronologie. Un double-clic sur l'axe rétablit le zoom temporel par défaut.
+              </p>
+            </div>
+          </div>
+
+          <div className="p-4 rounded-xl border border-[rgba(160,200,230,0.1)] bg-[#04091e] flex gap-3.5 items-start">
             <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0 mt-0.5">
               <RotateCcw className="w-4 h-4" />
             </div>
             <div className="space-y-1">
               <h4 className="text-xs font-bold text-white flex items-center gap-2">
-                Réinitialisation (Fit All)
+                Réinitialisation Contextuelle (Fit)
                 <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-emerald-500/10 text-emerald-400">
                   Double Clic
                 </span>
               </h4>
               <p className="text-xs text-[#9fb0c4] leading-relaxed">
-                Double-cliquez n'importe où sur le canvas ou cliquez sur le bouton <strong className="text-white">Fit</strong> pour réinitialiser le viewport à 1.0x.
+                Double-cliquez sur l'axe Y pour réinitialiser le prix, sur l'axe X pour le temps, ou au centre du graphique pour réinitialiser les deux axes simultanément.
               </p>
             </div>
           </div>
