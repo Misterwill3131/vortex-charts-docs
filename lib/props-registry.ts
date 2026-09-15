@@ -119,6 +119,24 @@ export const RANGE_CHART_PROPS: PropDefinition[] = [
     description: "Hauteur du canvas en pixels.",
   },
   {
+    name: "initialVisibleBars",
+    type: "number",
+    defaultValue: "undefined",
+    description: "Nombre de bougies visibles à l'ouverture (vue focalisée sur la fin de session avec défilement fluide).",
+  },
+  {
+    name: "allowOverscroll",
+    type: "boolean",
+    defaultValue: "true",
+    description: "Permet le déplacement direct et intuitif à la souris (clic gauche maintenu) avec marge élastique au-delà des bornes.",
+  },
+  {
+    name: "viewportMode",
+    type: '"reset" | "follow"',
+    defaultValue: '"reset"',
+    description: "Comportement du viewport lors de nouvelles bougies reçues en temps réel.",
+  },
+  {
     name: "showWatermark",
     type: "boolean",
     defaultValue: "true",
