@@ -11,6 +11,7 @@ import type {
   PieSlice,
   GeoRegion,
   BarDatum,
+  WhaleBiasPoint,
 } from "vortex-charts";
 
 // 1. Line Chart Data (Close Price Trajectory)
@@ -255,3 +256,16 @@ export const SAMPLE_BAR_GREEKS: BarDatum[] = [
   { x: 4, label: "Vega", value: -45 },
   { x: 5, label: "Rho", value: 12 },
 ];
+
+// 14. Whale Bias Points (Intraday Institutional Call vs Put Accumulation)
+export const SAMPLE_WHALE_BIAS_POINTS: WhaleBiasPoint[] = Array.from({ length: 42 }, (_, i) => {
+  const start = 1726407000000; // 09:30 ET
+  const step = 600000; // 10 min
+  const t = start + i * step;
+  // Starts high near 92%, fluctuates with intraday momentum, ends near 84%
+  const callPct = Math.round(
+    Math.max(20, Math.min(98, 92 - i * 0.28 + Math.sin(i / 2.5) * 5.5))
+  );
+  return { scannedAt: t, callPct };
+});
+

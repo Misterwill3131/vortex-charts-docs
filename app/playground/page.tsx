@@ -23,6 +23,7 @@ import {
   VortexRadarChart,
   VortexPieChart,
   VortexChoroplethMap,
+  VortexWhaleBiasChart,
 } from "vortex-charts";
 
 import {
@@ -60,6 +61,7 @@ import {
   SAMPLE_PIE_SLICES,
   SAMPLE_CHOROPLETH_REGIONS,
   SAMPLE_BAR_GREEKS,
+  SAMPLE_WHALE_BIAS_POINTS,
 } from "../../data/sample-suite-data";
 import { CodeBlock } from "../../components/CodeBlock";
 import {
@@ -99,6 +101,7 @@ const ALL_CHARTS: ChartMeta[] = [
   { id: "footprint", name: "Footprint Chart", category: "volume", description: "Order flow Bid x Ask volume executed clusters per price rung" },
   { id: "volume-profile", name: "Volume Profile", category: "volume", description: "Horizontal volume histogram with POC, VAH, and VAL nodes" },
   { id: "bar", name: "Bar / Greeks", category: "volume", description: "Categorical histogram for option Greeks and volume distribution" },
+  { id: "whale-bias", name: "Whale Flow Bias", category: "volume", description: "Intraday institutional call vs put accumulation ratio with 50% equilibrium threshold" },
 
   // Quantitative & Derivatives
   { id: "cone", name: "Expected Move Cone", category: "quant", description: "Options implied volatility cone and strike probabilities" },
@@ -160,6 +163,8 @@ export default function PlaygroundPage() {
         return `<VortexVolumeProfileChart\n  data={candles}\n  rows={28}\n  alignment="right"\n  height={${height}}\n  showWatermark={${showWatermark}}\n/>`;
       case "bar":
         return `<VortexBarChart\n  data={greeksData}\n  height={${height}}\n  symmetric={true}\n  showWatermark={${showWatermark}}\n/>`;
+      case "whale-bias":
+        return `<VortexWhaleBiasChart\n  points={whalePoints}\n  label="Call share intraday timeline · $501.0M total tracked"\n  height={${height}}\n  showWatermark={${showWatermark}}\n  showEquilibrium={true}\n/>`;
       case "cone":
         return `<VortexConeChart\n  candles={historicalCandles}\n  expectedMove={expectedMoveSpec}\n  targetRange={targetRangeSpec}\n  currentPrice={${CONE_CURRENT_PRICE}}\n  expirationDate="${CONE_EXPIRATION_DATE}"\n  height={${height}}\n  showWatermark={${showWatermark}}\n/>`;
       case "range":
@@ -209,7 +214,7 @@ export default function PlaygroundPage() {
       <div className="flex flex-wrap gap-2 border-b border-white/10 pb-4">
         {[
           { id: "price", label: "Trading & Price Action", count: 7, icon: CandlestickChart },
-          { id: "volume", label: "Order Flow & Volume", count: 3, icon: BarChart2 },
+          { id: "volume", label: "Order Flow & Volume", count: 4, icon: BarChart2 },
           { id: "quant", label: "Quantitative & Derivatives", count: 6, icon: Activity },
           { id: "portfolio", label: "Portfolio & Allocation", count: 5, icon: PieIcon },
         ].map((tab) => {
@@ -460,6 +465,16 @@ export default function PlaygroundPage() {
               height={height}
               symmetric={true}
               showWatermark={showWatermark}
+            />
+          )}
+
+          {selectedChartId === "whale-bias" && (
+            <VortexWhaleBiasChart
+              points={SAMPLE_WHALE_BIAS_POINTS}
+              height={height}
+              label="Call share intraday timeline · $501.0M total tracked"
+              showWatermark={showWatermark}
+              showEquilibrium={true}
             />
           )}
 
